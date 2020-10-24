@@ -23,3 +23,4 @@
 ## How to use the UI/ insert control points in display Interface?
  1. Execuate bsplineui.exe, choose '2D Curve'tab, click 'LoadScene' button, then load the scene window.  
  2. Set the curve features in the setting area, click 'NewCurve' button, an item named by curve type would show in the right list. Scroll bar 'Curve res' represent the curve resolution.
+ 3. press at any place in left-top-white area to check the selected curve's basic functions.
