@@ -1,6 +1,6 @@
 #pragma once
 
-//#include"stdafx.h"¡¡
+//#include"stdafx.h"Â¡Â¡
 #include "evaluator.h"
 //#include "bspline.h"
 
