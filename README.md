@@ -7,7 +7,7 @@
 ## Dependencies
 * newmat11 (http://www.robertnz.net/nm11.htm)
 ## Compile&Build
-### windows
+### Windows
   * Compile source code
     * If you are using Visual Studio 2012 or higher version, you can try to open the .sln file directly.  
     The project structure is as follows:
@@ -18,4 +18,8 @@
     >>* **newmat**: I compile the newmat lib in my solution, but it can be included only as a lib.   
   * GUI 
     * I used Qt to build my GUI, so I can use the C++ lib directly. And it is a Qt plugin for vs, so you must use a similar one to edit it. Or you can just run the .exe file I uploaded in /executable directory to see how bspline curves work. 
+### Linux
+  * A makefile under the 'bspline' directory could help you compile the source code into .a file immediately.
 ## How to use the UI/ insert control points in display Interface?
+ 1. Execuate bsplineui.exe, choose '2D Curve'tab, click 'LoadScene' button, then load the scene window.  
+ 2. Set the curve features in the setting area, click 'NewCurve' button, an item named by curve type would show in the right list. Scroll bar 'Curve res' represent the curve resolution.
