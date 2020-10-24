@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>bsplineuiClass</class>
+ <widget class="QMainWindow" name="bsplineuiClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>826</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>bspline visualization</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/lenovo/.designer/backup/icon.png</normaloff>C:/Users/lenovo/.designer/backup/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="lblCurveRes">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>180</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>211</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>2D Curve</string>
+     </attribute>
+     <widget class="QPushButton" name="btnNewCurveFromExistence">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Copy Curve</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnNewCurve">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>91</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New Curve</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnLoadScene2D">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load Scene</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>3D Surface</string>
+     </attribute>
+     <widget class="QPushButton" name="btnLoadScene3D">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load Scene</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnCreateSurface">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>121</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Create Surface</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSetUV">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>80</y>
+        <width>121</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SetU/V</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>num of u:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spbxSurfaceNumU">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>190</y>
+        <width>46</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>15</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>50</y>
+      <width>93</width>
+      <height>99</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="cbxUnibspl">
+       <property name="text">
+        <string>Uni</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbxQuasibspl">
+       <property name="text">
+        <string>Quasi</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbxBezierbspl">
+       <property name="text">
+        <string>Bezier</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbxNunibspl">
+       <property name="text">
+        <string>Non-uni</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>60</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>n:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>k:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="spbxCurveK">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>15</number>
+       </property>
+       <property name="value">
+        <number>2</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>120</y>
+      <width>125</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QRadioButton" name="rbtRiesenfeld">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Riesenfeld</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="rbtHartleyJudd">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Hartley-Judd</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QScrollBar" name="curveRes">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>220</y>
+      <width>321</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>3</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="pageStep">
+     <number>5</number>
+    </property>
+    <property name="sliderPosition">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>180</y>
+      <width>82</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Curve Res: </string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstCurves">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>50</y>
+      <width>211</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>tabWidget</zorder>
+   <zorder>lblCurveRes</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>curveRes</zorder>
+   <zorder>label_3</zorder>
+   <zorder>lstCurves</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>826</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="bsplineui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnLoadScene2D</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>loadGlWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnNewCurve</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>createCurve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbxUnibspl</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>on_cbxUnibspl_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbxQuasibspl</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>on_cbxQuasibspl_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>223</x>
+     <y>196</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbxBezierbspl</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>on_cbxBezierbspl_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>324</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbxNunibspl</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>on_cbxNunibspl_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lstCurves</sender>
+   <signal>currentItemChanged(QListWidgetItem*,QListWidgetItem*)</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>changeInsertFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>587</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>729</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>curveRes</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>curveRes_valuechanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>322</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbtRiesenfeld</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>changeParametricMethod()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>459</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnNewCurveFromExistence</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>copyCurve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLoadScene3D</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>loadGlWindow3D()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>746</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSetUV</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>setUV()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>273</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnCreateSurface</sender>
+   <signal>clicked()</signal>
+   <receiver>bsplineuiClass</receiver>
+   <slot>createSurface()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>364</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>loadGlWindow()</slot>
+  <slot>changeParametricMethod()</slot>
+  <slot>createCurve()</slot>
+  <slot>on_cbxUnibspl_clicked()</slot>
+  <slot>on_cbxQuasibspl_clicked()</slot>
+  <slot>on_cbxBezierbspl_clicked()</slot>
+  <slot>on_cbxNunibspl_clicked()</slot>
+  <slot>changeInsertFocus()</slot>
+  <slot>curveRes_valuechanged(int)</slot>
+  <slot>copyCurve()</slot>
+  <slot>loadGlWindow3D()</slot>
+  <slot>setUV()</slot>
+  <slot>createSurface()</slot>
+ </slots>
+</ui>
