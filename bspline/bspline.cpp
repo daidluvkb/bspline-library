@@ -592,7 +592,7 @@ void bspline::NuniBspline::changeCurveRes(int num_of_points /*= 5*/)
 	right = 1;
 	delta = (right - left) / num_of_points;
 	u = left;
-	for(int j = 1; j <= num_of_points + 1; j++)//°üº¬ÓÒ¶Ëµã
+	for(int j = 1; j <= num_of_points + 1; j++)//åŒ…å«å³ç«¯ç‚¹
 	{			
 		pu = getPu(u);
 		u += delta;
@@ -637,7 +637,7 @@ void bspline::NuniBspline::updateCurve()
 	right = 1;
 	delta = (right - left) / _curveres;
 	u = left;
-	for(int j = 1; j <= _curveres + 1; j++)//°üº¬ÓÒ¶Ëµã
+	for(int j = 1; j <= _curveres + 1; j++)//åŒ…å«å³ç«¯ç‚¹
 	{			
 		pu = getPu(u);
 		u += delta;
@@ -686,7 +686,7 @@ void bspline::NuniBspline::recalculate()
 	right = 1;
 	delta = (right - left) / _curveres;
 	u = left;
-	for(int j = 1; j <= _curveres + 1; j++)//°üº¬ÓÒ¶Ëµã
+	for(int j = 1; j <= _curveres + 1; j++)//åŒ…å«å³ç«¯ç‚¹
 	{			
 		pu = getPu(u);
 		u += delta;
