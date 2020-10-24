@@ -49,7 +49,7 @@ double caculateSquarDistance(Point a, Point b)
 }
 int getIndexNearByMouse(int x, int y)
 {
-	double precision = 200;		//¾«È·¶È
+	double precision = 200;		//ç²¾ç¡®åº¦
 	int index = -1;
 	double Min;
 	for (int i = 0; i < p.size(); i++)
@@ -100,7 +100,7 @@ void Bspline__(Point a,Point b,Point c,Point d)
 void drawControlPoints()
 {
 	BsplineFactory& fac = BsplineFactory::getFactory();
-	//»­µã
+	//ç”»ç‚¹
 	for (int i = 0; i < fac.curveNum(); i++)
 	{
 		shared_ptr<BsplineBase> c = fac.getCurve(i);
@@ -115,7 +115,7 @@ void drawControlPoints()
 		}
 		glEnd();
 
-		//»­Ïß
+		//ç”»çº¿
 		glLineWidth(2);
 		glColor3d(0, 1, 0);
 		glBegin(GL_LINE_STRIP);
@@ -130,7 +130,7 @@ void drawControlPoints()
 void drawControlPoints3D()
 {
 	BsplineFactory& fac = BsplineFactory::getFactory();
-	//»­µã
+	//ç”»ç‚¹
 
 	vector<array<double, 3>> c = fac.get3DPoints();
 	glBegin(GL_POINTS);
@@ -146,7 +146,7 @@ void drawControlPoints3D()
 void _drawControlPointsXY()
 {
 	BsplineFactory& fac = BsplineFactory::getFactory();
-	//»­µã
+	//ç”»ç‚¹
 	for (int i = 0; i < fac.surfaceNum(); i++)
 	{
 		shared_ptr<BsplineSurface> c = fac.getSurface(i);
@@ -165,7 +165,7 @@ void _drawControlPointsXY()
 			}
 			glEnd();
 
-			//»­Ïß
+			//ç”»çº¿
 			glLineWidth(2);
 			glColor3d(0, 1, 0);
 			glBegin(GL_LINE_STRIP);
@@ -180,7 +180,7 @@ void _drawControlPointsXY()
 void drawControlPointsXY()
 {
 	BsplineFactory& fac = BsplineFactory::getFactory();
-	//»­µã
+	//ç”»ç‚¹
 
 	vector<array<double, 3>> c = fac.get3DPoints();
 	glBegin(GL_POINTS);
@@ -196,7 +196,7 @@ void drawControlPointsXY()
 void _drawControlPointsZ()
 {
 	BsplineFactory& fac = BsplineFactory::getFactory();
-	//»­µã
+	//ç”»ç‚¹
 	for (int i = 0; i < fac.surfaceNum(); i++)
 	{
 		shared_ptr<BsplineSurface> c = fac.getSurface(i);
@@ -215,7 +215,7 @@ void _drawControlPointsZ()
 			}
 			glEnd();
 
-			//»­Ïß
+			//ç”»çº¿
 			glLineWidth(2);
 			glColor3d(0, 1, 0);
 			glBegin(GL_LINE_STRIP);
@@ -231,7 +231,7 @@ void _drawControlPointsZ()
 void drawControlPointsZ()
 {
 	BsplineFactory& fac = BsplineFactory::getFactory();
-	//»­µã
+	//ç”»ç‚¹
 
 	vector<array<double, 3>> c = fac.get3DPoints();
 	glBegin(GL_POINTS);
@@ -380,7 +380,7 @@ void MouseCB(int _b, int _s, int _x, int _y)
 void subDisplay()
 {
 	int i = 0;
-	glClear(GL_COLOR_BUFFER_BIT);    //Çå³ıÑÕÉ«»º´æºÍÉî¶È»º´æ
+	glClear(GL_COLOR_BUFFER_BIT);    //æ¸…é™¤é¢œè‰²ç¼“å­˜å’Œæ·±åº¦ç¼“å­˜
 	subdrawAxis(5);
 	subdrawNikus();
 	glFlush();
@@ -389,7 +389,7 @@ void subDisplay()
 void subDisplayXY()
 {
 	int i = 0;
-	glClear(GL_COLOR_BUFFER_BIT);    //Çå³ıÑÕÉ«»º´æºÍÉî¶È»º´æ
+	glClear(GL_COLOR_BUFFER_BIT);    //æ¸…é™¤é¢œè‰²ç¼“å­˜å’Œæ·±åº¦ç¼“å­˜
 	subdrawAxis(5);
 
 	drawControlPointsXY();
@@ -398,7 +398,7 @@ void subDisplayXY()
 
 void subDisplayZ()
 {
-	glClear(GL_COLOR_BUFFER_BIT);    //Çå³ıÑÕÉ«»º´æºÍÉî¶È»º´æ
+	glClear(GL_COLOR_BUFFER_BIT);    //æ¸…é™¤é¢œè‰²ç¼“å­˜å’Œæ·±åº¦ç¼“å­˜
 	subdrawAxis(5);
 	drawControlPointsZ();
 	glFlush();
@@ -407,7 +407,7 @@ void subDisplayZ()
 void myDisplay()
 {
 	int i = 0;
-	glClear(GL_COLOR_BUFFER_BIT);    //Çå³ıÑÕÉ«»º´æºÍÉî¶È»º´æ
+	glClear(GL_COLOR_BUFFER_BIT);    //æ¸…é™¤é¢œè‰²ç¼“å­˜å’Œæ·±åº¦ç¼“å­˜
 	drawControlPoints();
 	/*if (p.size() >= 4)
 		for (int i = 0; i < p.size() - 3; i++)
@@ -426,7 +426,7 @@ void myDisplay3D()
 	glRotated(elev+delev, 1.0, 0.0, 0.0);
 	glRotated(azim+dazim, 0.0, 1.0, 0.0);
 	int i = 0;
-	glClear(GL_COLOR_BUFFER_BIT);    //Çå³ıÑÕÉ«»º´æºÍÉî¶È»º´æ
+	glClear(GL_COLOR_BUFFER_BIT);    //æ¸…é™¤é¢œè‰²ç¼“å­˜å’Œæ·±åº¦ç¼“å­˜
 	drawControlPoints3D();
 
 	drawSurface();
@@ -437,7 +437,7 @@ void keyboard(unsigned char key, int x, int y)
 {
 	if (key == 27)		//ESC
 		exit(0);
-	if (key == 8)		//ÍË¸ñ¼ü
+	if (key == 8)		//é€€æ ¼é”®
 	{
 		int index = getIndexNearByMouse(x, y);
 		if (index == -1)
@@ -502,7 +502,7 @@ void mouseZ(int button, int state, int x, int y)
 }
 void motion(int x, int y)
 {
-	if (mouseRightIsDown)		//°´×¡ÓÒ¼üÒÆ¶¯µã
+	if (mouseRightIsDown)		//æŒ‰ä½å³é”®ç§»åŠ¨ç‚¹
 	{
 		/*= getIndexNearByMouse(x, y);
 		if (index == -1)
@@ -513,7 +513,7 @@ void motion(int x, int y)
 		glutPostRedisplay();
 	}
 }
-void Reshape(int w, int h)      //Á½¸ö²ÎÊı£º´°¿Ú±»ÒÆ¶¯ºó´óĞ¡
+void Reshape(int w, int h)      //ä¸¤ä¸ªå‚æ•°ï¼šçª—å£è¢«ç§»åŠ¨åå¤§å°
 {
 	glViewport(0, 0, w, h);
 	glMatrixMode(GL_PROJECTION);
@@ -523,12 +523,12 @@ void Reshape(int w, int h)      //Á½¸ö²ÎÊı£º´°¿Ú±»ÒÆ¶¯ºó´óĞ¡
 	glLoadIdentity();
 }
 
-void initWindow(int &argc, char *argv[], int width, int height, char *title)    //³õÊ¼»¯²¢ÏÔÊ¾µ½ÆÁÄ»ÖĞÑë
+void initWindow(int &argc, char *argv[], int width, int height, char *title)    //åˆå§‹åŒ–å¹¶æ˜¾ç¤ºåˆ°å±å¹•ä¸­å¤®
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitWindowPosition((GetSystemMetrics(SM_CXSCREEN) - width) >> 1, (GetSystemMetrics(SM_CYSCREEN) - height) >> 1);       //Ö¸¶¨´°¿ÚÎ»ÖÃ
-	glutInitWindowSize(width, height);       //Ö¸¶¨´°¿Ú´óĞ¡
+	glutInitWindowPosition((GetSystemMetrics(SM_CXSCREEN) - width) >> 1, (GetSystemMetrics(SM_CYSCREEN) - height) >> 1);       //æŒ‡å®šçª—å£ä½ç½®
+	glutInitWindowSize(width, height);       //æŒ‡å®šçª—å£å¤§å°
 	GLuint mainWin = glutCreateWindow(title);
 
 	//GLuint subWIn1 = glutCreateSubWindow(mainWin, 0, 0, width / 5, height / 5);
@@ -536,12 +536,12 @@ void initWindow(int &argc, char *argv[], int width, int height, char *title)    
 	glShadeModel(GL_FLAT);
 }
 
-void initWindow3D(int &argc, char *argv[], int width, int height, char *title)    //³õÊ¼»¯²¢ÏÔÊ¾µ½ÆÁÄ»ÖĞÑë
+void initWindow3D(int &argc, char *argv[], int width, int height, char *title)    //åˆå§‹åŒ–å¹¶æ˜¾ç¤ºåˆ°å±å¹•ä¸­å¤®
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitWindowPosition((GetSystemMetrics(SM_CXSCREEN) - width) >> 1, (GetSystemMetrics(SM_CYSCREEN) - height) >> 1);       //Ö¸¶¨´°¿ÚÎ»ÖÃ
-	glutInitWindowSize(width, height);       //Ö¸¶¨´°¿Ú´óĞ¡
+	glutInitWindowPosition((GetSystemMetrics(SM_CXSCREEN) - width) >> 1, (GetSystemMetrics(SM_CYSCREEN) - height) >> 1);       //æŒ‡å®šçª—å£ä½ç½®
+	glutInitWindowSize(width, height);       //æŒ‡å®šçª—å£å¤§å°
 	GLuint mainWin = glutCreateWindow(title);
 
 	//GLuint subWIn1 = glutCreateSubWindow(mainWin, 0, 0, width / 5, height / 5);
@@ -556,8 +556,8 @@ void setWindowFuncsAndShow(bool threeD /*= false*/)
 		int x;
 	initWindow3D(x, 0, mainwin_wildth, mainwin_height, "bsplinecurve3D");
 
-	puts("\n\tÊó±êÔÚ´°¿Úµã»÷»æÖÆBÑùÌõÇúÏß£¬Êó±êÓÒ¼üÒÆ¶¯¿ØÖÆµã");
-	puts("\tÍË¸ñ¼ü£¨¡û£©É¾³ıÊó±êËùÔÚµÄµã");
+	puts("\n\té¼ æ ‡åœ¨çª—å£ç‚¹å‡»ç»˜åˆ¶Bæ ·æ¡æ›²çº¿ï¼Œé¼ æ ‡å³é”®ç§»åŠ¨æ§åˆ¶ç‚¹");
+	puts("\té€€æ ¼é”®ï¼ˆâ†ï¼‰åˆ é™¤é¼ æ ‡æ‰€åœ¨çš„ç‚¹");
 	//mainwin = ::FindWindow("FREEGLUT", "bsplinecurve");
 	//cout << mainwin;
 	glutDisplayFunc(myDisplay3D);
@@ -598,8 +598,8 @@ void setWindowFuncsAndShow(bool threeD /*= false*/)
 	int x;
 	initWindow(x, 0, mainwin_wildth, mainwin_height, "bsplinecurve");
 
-	puts("\n\tÊó±êÔÚ´°¿Úµã»÷»æÖÆBÑùÌõÇúÏß£¬Êó±êÓÒ¼üÒÆ¶¯¿ØÖÆµã");
-	puts("\tÍË¸ñ¼ü£¨¡û£©É¾³ıÊó±êËùÔÚµÄµã");
+	puts("\n\té¼ æ ‡åœ¨çª—å£ç‚¹å‡»ç»˜åˆ¶Bæ ·æ¡æ›²çº¿ï¼Œé¼ æ ‡å³é”®ç§»åŠ¨æ§åˆ¶ç‚¹");
+	puts("\té€€æ ¼é”®ï¼ˆâ†ï¼‰åˆ é™¤é¼ æ ‡æ‰€åœ¨çš„ç‚¹");
 	//mainwin = ::FindWindow("FREEGLUT", "bsplinecurve");
 	//cout << mainwin;
 	glutDisplayFunc(myDisplay);
