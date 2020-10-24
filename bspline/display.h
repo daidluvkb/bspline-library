@@ -35,8 +35,8 @@ void mouse(int button, int state, int x, int y);
 void mouseXY(int button, int state, int x, int y);
 void mouseZ(int button, int state, int x, int y);
 void motion(int x, int y);
-void Reshape(int w, int h);      //Á½¸ö²ÎÊı£º´°¿Ú±»ÒÆ¶¯ºó´óĞ¡
-void initWindow(int &argc, char *argv[], int width, int height, char *title);    //³õÊ¼»¯²¢ÏÔÊ¾µ½ÆÁÄ»ÖĞÑë
+void Reshape(int w, int h);      //ä¸¤ä¸ªå‚æ•°ï¼šçª—å£è¢«ç§»åŠ¨åå¤§å°
+void initWindow(int &argc, char *argv[], int width, int height, char *title);    //åˆå§‹åŒ–å¹¶æ˜¾ç¤ºåˆ°å±å¹•ä¸­å¤®
 
 void setWindowFuncsAndShow(bool threeD);
 
