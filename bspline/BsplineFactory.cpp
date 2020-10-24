@@ -137,7 +137,7 @@ std::vector<std::array<double, 3>> BsplineFactory::get3DPoints() const
 
 bool sortFun(const pair<double, double>& p1, const pair<double, double>& p2)
 {
-	return p1.first < p2.first;//ÉýÐòÅÅÁÐ  
+	return p1.first < p2.first;//Ã‰Ã½ÃÃ²Ã…Ã…ÃÃ  
 }
 
 void BsplineFactory::genSuface()
